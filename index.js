@@ -28,7 +28,7 @@ client.connect(err => {
     app.get('/services', (req, res) => {
         serviceCollection.find()
         .toArray((err, items) => {
-            res.send(items)
+            res.json(items)
         })
     })
 
@@ -53,7 +53,7 @@ client.connect(err => {
     app.get('/reviews', (req, res) => {
         reviewCollection.find()
         .toArray((err, items) => {
-            res.send(items)
+            res.json(items)
         })
     })
 
